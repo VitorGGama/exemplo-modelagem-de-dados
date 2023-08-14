@@ -1,2 +1,3 @@
-# exemplo-modelagem-de-dados
- modelagem lógica usando mySQL Workbench
+# MOdelagem lógica usando MySQL Workbench
+
+Atividades de estudo de modelagem de banco de dados
