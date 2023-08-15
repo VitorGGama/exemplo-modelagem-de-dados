@@ -45,8 +45,35 @@ ALTER TABLE produtos
     --Criando a chave-estrangeira (fabricante_id) que 
     --aponta para a chave-prímaria (id) de outra tabela(fabricantes) 
 
-
 ```
+### Exemplos de alterações estruturais na tabela
+
+### Renomear tabela
+
+```sql
+ALTER TABLE fabricantes RENAME TO fornecedores;
+```
+
+### Modificar colunas
+```sql
+ALTER TABLE produtos
+    MODIFY COLUMN preco INT NUll;
+
+ALTER TABLE produtos 
+    MODIFY COLUMN preco DECIMAL(6,2) NOT NULL;    
+```
+### Renomear colunas
+
+```sql
+ALTER TABLE fabricantes
+    CHANGE nome_do_fabricante nome  VARCHAR(45) NOT NULL;
+```
+
+
+
+
+
+
 
 
 
