@@ -51,6 +51,33 @@ VALUES(
     5
 );
 
+INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+    'Geladeira',     
+    'refrigerador fros-free com acesso a internet',
+    5000,
+    12,
+    6
+),
+(
+    'iphone 18 Pro Max',
+    'Smartphone Aplle cheio das frescuras e caro de mais',
+    12666.6,
+    3,
+    3
+)
+
+(
+    'ipad Mini',
+    'Tablet Aplle com tela retina display e tals',
+    4999.01,
+    5,
+    3
+);
+
+
+
+
 
 
 ```
