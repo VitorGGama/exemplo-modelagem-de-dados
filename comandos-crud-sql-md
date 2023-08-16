@@ -1,0 +1,58 @@
+# Comandos para operações CRUD no banco de dados
+
+## Resumo 
+
+C -> CREATE (inserir dados usando comando `INSERT`)
+R -> READ (ler dados usando comando `SELECT`)
+U -> UPDATE(atualizar dados usando comando `UPDATE`)
+D -> DELETE(excluir dados usando comando `DELETE`)
+
+## INSERT
+
+### Fabricantes 
+
+```sql
+INSERT INTO fabricantes (nome) VALUES('Asus');
+
+```
+
+
+```sql
+INSERT INTO fabricantes (nome) VALUES('Dell');
+
+INSERT INTO fabricantes (nome) VALUES('Aplle');
+
+INSERT INTO fabricantes (nome) VALUES('LG'), ('Sansung'), ('Brastemp');
+
+INSERT INTO fabricantes (nome) VALUES('Positivo'), ('Microsoft');
+
+```
+### Produtos
+
+```sql
+INSERT INTO produtos (nome, preco, descricao, quantidade, fabricante_id)
+VALUES(
+    'Ultrabook', 
+    3500,
+    'equipamento de ultima geração cheio de recursos, com processador Intel
+    Core i9 show de bola.',
+    7,
+    2 --id do fabricante DELL
+
+);
+
+INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+    'Tablet android',     
+    'Tablet com a versão 14 do sistema operacional android, possui tela 
+    de 10 polegadas e armazenamneto de 128 GB, e 64 GB de Ram',
+    1500.99,
+    5,
+    5
+);
+
+
+
+```
+
+
