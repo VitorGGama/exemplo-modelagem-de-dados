@@ -114,14 +114,71 @@ SELECT nome, preco, quantidade FROM produtos WHERE preco < 5000;
 SELECT nome, descricao  FROM produtos WHERE fabricante_id = 3 ;
 
 ```
-
-### Operadores lógicos: E, OU, NÃO
-
+## Operadores Lógicos: E, OU, NÃO
+## E
 ```sql
 SELECT nome, preco FROM produtos
-WHERE preco >= 2000 AND preco =< 6000;
+WHERE preco >= 2000 AND preco <= 6000; 
+
+-- A query abaixo não retorna registros
+-- já que as condições não foram totalmente atendidas
+SELECT nome, preco FROM produtos
+WHERE preco > 5000 AND preco <= 6000; 
+```
+
+## OU
+```sql
+SELECT nome, preco FROM produtos
+WHERE preco > 5000 OR preco <= 3000; 
+
+-- Exiba nome e preço somente dos produtos
+-- da Apple e da Samsung
+SELECT nome, preco FROM produtos
+WHERE fabricante_id = 3 OR fabricante_id = 5;
+
+-- versão usando a função IN()
+SELECT nome, preco FROM produtos
+WHERE fabricante_id IN(3, 5);
 
 SELECT nome, preco FROM produtos
-WHERE preco >= 5000 AND preco <= 6000;
+WHERE fabricante_id NOT IN(3, 5);
+
+``` 
+
+## NÃO
+```sql
+SELECT nome, descricao, preco FROM produtos
+WHERE NOT fabricante_id = 8;
+
+-- versão usando operador relacional "diferença/diferente"
+SELECT nome, descricao, preco FROM produtos
+WHERE fabricante_id != 8;
 
 ```
+
+## UPDATE
+
+
+
+```sql
+--ATUALIZAR -> UPDATE
+--CONFIGURAÇÃO -> SET
+--ONDE -> WHERE
+
+UPDATE fabricantes SET nome = 'Asus do Brasil'
+WHERE id = 1; -- não se esqueça do WHERE!!
+```
+
+```sql
+UPDATE produtos SET preco = 6549.74
+WHERE id = 4;
+```
+
+```sql
+UPDATE produtos SET quantidade = 20 WHERE fabricante_id IN (3, 5);
+```
+
+
+
+
+
