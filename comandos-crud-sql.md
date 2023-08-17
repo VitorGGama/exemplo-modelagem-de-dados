@@ -185,8 +185,28 @@ DELETE FROM fabricantes WHERE id = 1;
 
 DELETE FROM fabricantes WHERE id = 4;
 
+--A query abaixo NÃO FUNCIONA devido á restrição
+-- de chave estrangeira/relacionamento, ou seja,
+--existem produtos associados ao fabricante 3 (aplle)
+--DELETE FROM fabricantes WHERE id = 3;
 
 ```
+
+## SELECT: outras formas de uso
+
+```sql
+SELECT nome, preco FROM produtos ORDER BY nome;
+SELECT nome, preco FROM produtos ORDER BY preco;
+
+SELECT nome, preco FROM produtos ORDER BY preco DESC;
+
+--DESC: Classificação em ordem decrescente
+--ASC (padrão): classificação em ordem crescente
+
+
+```
+
+
 
 
 
