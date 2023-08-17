@@ -178,6 +178,16 @@ WHERE id = 4;
 UPDATE produtos SET quantidade = 20 WHERE fabricante_id IN (3, 5);
 ```
 
+## DELETE
+
+```sql
+DELETE FROM fabricantes WHERE id = 1;
+
+DELETE FROM fabricantes WHERE id = 4;
+
+
+```
+
 
 
 
