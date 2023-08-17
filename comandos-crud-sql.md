@@ -51,6 +51,8 @@ VALUES(
     5
 );
 
+
+
 INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
 VALUES(
     'Geladeira',     
@@ -58,14 +60,14 @@ VALUES(
     5000,
     12,
     6
-),
+);
 (
     'iphone 18 Pro Max',
     'Smartphone Aplle cheio das frescuras e caro de mais',
     12666.6,
     3,
     3
-)
+);
 
 (
     'ipad Mini',
@@ -73,7 +75,32 @@ VALUES(
     4999.01,
     5,
     3
+)
+
+
+
+INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
+VALUES
+(
+    'Xbox Series S',
+    'Velocidade e desempenho de ultíma geração',
+    1997,
+    5,
+    8
 );
+
+INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
+VALUES
+(
+'Notebool Motion',
+'Intel dual core 4GB de RAM, 128GB SSD e tela 14,1 Polegadadas',
+1213.65,
+8,
+7
+);
+
+```
+
 
 
 
