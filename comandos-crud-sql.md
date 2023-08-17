@@ -197,12 +197,13 @@ DELETE FROM fabricantes WHERE id = 4;
 ```sql
 SELECT nome, preco FROM produtos ORDER BY nome;
 SELECT nome, preco FROM produtos ORDER BY preco;
-
 SELECT nome, preco FROM produtos ORDER BY preco DESC;
 
---DESC: Classificação em ordem decrescente
---ASC (padrão): classificação em ordem crescente
+-- DESC: classificação em ordem decrescente
+-- ASC (padrão): classificação em ordem crescente
 
+SELECT nome, preco FROM produtos 
+WHERE quantidade = 20 ORDER BY nome;
 
 ```
 
@@ -218,6 +219,49 @@ WHERE descricao LIKE '%tela%' OR nome LIKE '%tela%';
 --o % significa 'qualquer texto' antes da palavra ou 
 --depois da palavra.
 ```
+
+### Operações e funções de agragação
+
+```sql
+SELECT SUM(preco)  FROM produtos; -- SOMA
+SELECT SUM(preco)  as TOTAL FROM produtos; --apelido
+
+-- MEDIA e arredondamento
+SELECT AVG(preco) as "Média dos Preços" FROM produtos;
+SELECT ROUND(AVG(preco), 2) as "Média dos Preços"
+FROM produtos;
+
+
+--CONTAGEM
+SELECT COUNT(id) as "Qtd de produtos" FROM produtos;
+
+SELECT COUNT(DISTINCT fabricante_id) as "Qtd de fabricantes com produtos" FROM produtos;
+
+--DISTINCT é uma clausula/flag que evita a duplicidade na contagem de registros.
+
+```
+### Operações matematicas
+
+```sql
+SELECT nome, preco, quantidade, (preco * quantidade) as total
+FROM produtos;
+
+```
+
+### Segmentação/agrupamento de resultado
+
+```sql
+UPDATE produtos SET fabricante_id = 2 WHERE id = 2;
+
+
+SELECT fabricante_id, SUM(preco) as TOTAL FROM produtos
+GROUP BY fabricante_id;
+```
+
+
+
+
+
 
 
 
