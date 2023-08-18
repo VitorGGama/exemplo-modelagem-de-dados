@@ -299,6 +299,37 @@ ORDER BY produto; -- ou produtos.nome
 
 ### Fabricante, soma dos preços e quantidade de produtos
 
+```sql 
+SELECT 
+    fabricantes.nome as Fabricante,
+    SUM(produtos.preco) as Total,
+    count(produtos.fabricante_id) as "Qtd de Produtos"
+from produtos inner join fabricantes
+on produtos.fabricante_id = fabricantes.id
+group by Fabricante
+order by total;    
+
+```
+
+### Trazer a quantidade de produtos de cada fabricante
+
+```sql
+SELECT 
+    fabricantes.nome as Fabricante,    
+    count(produtos.fabricante_id) as "Qtd de Produtos",
+    SUM(produtos.quantidade) as Estoque
+from produtos inner join fabricantes
+on produtos.fabricante_id = fabricantes.id
+group by Fabricante;
+
+      
+
+    
+    
+```
+
+
+
 
 
 
